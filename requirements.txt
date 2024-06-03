@@ -1,10 +1,13 @@
-Manuel Fuioso möchte sein erstes Geschäft in Brandenburg an der Havel aufbauen. Dazu hat er bereits einen Laden in der Innenstadt angemietet. Er möchte seine Arbeit möglichst mit digitalen Werkzeugen unterstützen. Er möchte zukünftige weitere Geschäfte in Brandenburg und Umgebung aufbauen. Dazu ist es wichtig, dass die Software für eine Pizzeria leicht zu bedienen und leicht an zukünftige Wünsche anzupassen ist. Er möchte in jedem weiteren Geschäft einen Manager einstellen, welcher mit der Pizzeria-Software dieses Geschäft verwaltet. In der Anfangsphase soll die Software auf einem Rechner im Laden installiert werden können. In der Zukunft kann sich Mario gut vorstellen, dass die Software über das Internet bedient werden soll. Sollte es Probleme mit der Software geben muss ein IT-Administrator den Zustand der Software prüfen und diese wieder in Betrieb nehmen können. In seinem Laden hat er derzeit einen Windows-Laptop aber er denkt darüber nach auf einen Apple Rechner zu wechseln. Die Anwendung soll möglichst auf allen Betriebssystemen installiert werden können.
-
-Manuel Fuioso möchte mit Hilfe der Pizzeria-Software seine Kunden verwalten. Dazu soll ein Manager Kunden im System anlegen können. Für einen Kunden sollen folgende Daten aufgenommen werden:
-• Vorname, Nachname
-• Adresse als Straße, Hausnummer, Ort
-• Telefonnummer
-• E-Mail-Adresse
-• Geburtsdatum
-• Geschlecht
-Für jeden Kunden muss eine Bestellung im System aufgegeben werden können. Für alle Bestellungen muss eine Rechnung erstellt werden können. Ein Manager muss ebenfalls die Möglichkeit haben einen Kunden im System löschen zu können. Hier ist auch die DSGVO zu beachten. Als Zukunftsszenario soll mitgedacht werden, dass bei mehreren Geschäften alle Kundendaten zusammengeführt werden müssen.
+Manuel Fuioso möchte sein erstes Pizza Geschäft in Brandenburg an der Havel aufbauen.
+Manuel Fuioso möchte mit Hilfe der Pizzeria Software seine Gerichte bzw. Speisekarte verwalten.
+Er möchte unterschiedliche Gerichte in seinen Geschäften anbieten:
+• Pizza
+• Pasta
+• Dessert, darunter fallen auch Getränke.
+Für ein Gericht möchte er folgende Dinge angeben können:
+• Größe in Zentimetern oder als Beschreibung (klein, mittel, groß)
+• Name
+• Preis in Euro
+• Zutaten, jede Zutat hat einen Namen und einen Preis
+• Bild (optional)
+Alle Gerichte bilden eine Speisekarte. Der Manager möchte auch Gerichte wieder löschen bzw. von der Speisekarte nehmen können.
