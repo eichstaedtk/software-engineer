@@ -13,9 +13,9 @@ os.environ[
 
 class SoftwareEngineeringCrew:
   def __init__(self):
-    self.re = RequirementEngineer()
-    self.sa = SoftwareArchitect()
-    self.sd = SoftwareDeveloper()
+    self.re = RequirementEngineer("llama3-8b-8192")
+    self.sa = SoftwareArchitect("llama3-8b-8192")
+    self.sd = SoftwareDeveloper("llama3-8b-8192")
 
   def run(self):
     agents = {

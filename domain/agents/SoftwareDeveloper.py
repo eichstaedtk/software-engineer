@@ -12,10 +12,10 @@ class SoftwareDeveloper:
   role = "Software Developer"
   agend = None
 
-  def __init__(self):
+  def __init__(self, llm):
     self.llm = ChatGroq(
         api_key=os.getenv("GROQ_API_KEY"),
-        model="mixtral-8x7b-32768")
+        model=llm)
     self.agend = self.createAgend()
 
   def createAgend(self):

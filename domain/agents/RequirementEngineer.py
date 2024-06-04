@@ -7,17 +7,16 @@ from langchain_groq import ChatGroq
 
 
 class RequirementEngineer:
-  description = "I'am specialized in manage software product requirements. My job is it to collect, write and prioritize all requirements of all stakeholder and transfer these into a Backlog."
-  model = "mixtral-8x7b-32768"
-  goal = f"Identify,collect, prioritize and manage all requirements of all stakeholder."
+  description = "Ich bin spezialisiert darauf, einen product owner beim Management aller Anforderungen an eine Software zu unterstützen."
+  goal = f"Identifizieren, sammeln und priorisieren aller Anforderungen an die zu entwickelnde Software."
   role = "Requirements Engineer"
-  file_read_tool = FileReadTool(file_path='requirements.txt')
+  file_read_tool = FileReadTool(file_path='./../requirements.txt')
   agend = None
 
-  def __init__(self):
+  def __init__(self, llm):
     self.llm = ChatGroq(
         api_key=os.getenv("GROQ_API_KEY"),
-        model="mixtral-8x7b-32768")
+        model=llm)
     self.agend = self.createAgend()
 
   def createAgend(self):
@@ -32,9 +31,11 @@ class RequirementEngineer:
 
   def createTaskCreateUseCases(self):
     return Task(
-        description=f"Write use cases for the following requirements and focus on the INVEST criteria. Create for the use cases a plantuml use case diagram.",
+        description=f"Schreibe use cases für die nachfolgenden Anforderungen mit dem Fokus auf die INVEST Kriterien. Erstelle ein use case diagramm mit plantuml",
         agent=self.agend,
-        expected_output=f"A plantuml use case diagram file in UML 2.0 syntax. Use the Use Case Guide 2.0 of Ivar Jacobson to create the use cases in a structured form.",
-        human_input=False,
-        output_file="./output/use_cases.txt"
+        expected_output=f"Eine use case datei in welcher jeder use case eine nummer, einen titel, eine kurze Beschreibung und das happy path szenario enthält."
+                        f"Jede Beschreibung eines Use Cases soll sich am Use Case Guide 2.0 von Ivar Jacobson orientieren.",
+        allow_delegation=False,
+        human_input=True,
+        output_file="./../output/use_cases.txt"
     )
