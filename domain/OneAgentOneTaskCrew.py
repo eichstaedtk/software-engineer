@@ -10,7 +10,7 @@ os.environ[
 
 class OneAgentOneTaskCrew:
   def __init__(self):
-    self.re = RequirementEngineer()
+    self.re = RequirementEngineer("llama3-8b-8192")
 
   def run(self):
     crew = Crew(
