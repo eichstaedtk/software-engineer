@@ -6,6 +6,12 @@ from domain.agents.RequirementEngineer import RequirementEngineer
 
 os.environ[
   "GROQ_API_KEY"] = "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"
+proxy = 'http://proxy.spk-berlin.de:3128'
+
+os.environ['http_proxy'] = proxy
+os.environ['HTTP_PROXY'] = proxy
+os.environ['https_proxy'] = proxy
+os.environ['HTTPS_PROXY'] = proxy
 
 
 class OneAgentOneTaskCrew:
